@@ -29,6 +29,9 @@ x
 -- Habilitar UFT-8 no termínal
 os.execute("chcp 65001")
 
+local INITIAL_TABLE <const> = "|"
+local BORDER_TOP_BOT <const> = "###############################################"
+
 --Criatura
 local monsterName = "CREEPER"
 local description = "Um monstro furtivo com um temeramento explosivo"
@@ -63,21 +66,21 @@ end
 
 
 --Cartão
-print("==================================================")
-print("x")
-print("x" .. monsterName)
-print("x" .. description)
-print("x")
-print("x Item favorito: " .. item)
-print("x Som: " .. sound)
-print("x Emoji Favorito: " .. emoji)
-print("x Horário Favorito: " .. favoriteTime)
-print("x")
-print("x Atributos")
-print("x    Ataque:       " .. getProgressBar(atackAttribute))
-print("x    Defesa:       " .. getProgressBar(defenseAttribute))
-print("x    Vida:         " .. getProgressBar(lifeAttribute))
-print("x    Velocidade:   " .. getProgressBar(speedAttribute))
-print("x    Inteligência: " .. getProgressBar(inteligenceAttribute))
-print("x")
-print("==================================================")
+print(BORDER_TOP_BOT)
+print(INITIAL_TABLE)
+print(INITIAL_TABLE .. monsterName)
+print(INITIAL_TABLE .. description)
+print(INITIAL_TABLE)
+print(INITIAL_TABLE .. item)
+print(INITIAL_TABLE .. sound)
+print(INITIAL_TABLE .. emoji)
+print(INITIAL_TABLE .. favoriteTime)
+print(INITIAL_TABLE)
+print(INITIAL_TABLE .. " Atributos")
+print(INITIAL_TABLE .. "    Ataque:       " .. getProgressBar(atackAttribute))
+print(INITIAL_TABLE .. "    Defesa:       " .. getProgressBar(defenseAttribute))
+print(INITIAL_TABLE .. "    Vida:         " .. getProgressBar(lifeAttribute))
+print(INITIAL_TABLE .. "    Velocidade:   " .. getProgressBar(speedAttribute))
+print(INITIAL_TABLE .. "    Inteligência: " .. getProgressBar(inteligenceAttribute))
+print(INITIAL_TABLE)
+print(BORDER_TOP_BOT)
